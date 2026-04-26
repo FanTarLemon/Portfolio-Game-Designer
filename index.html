@@ -3,255 +3,315 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Designer Portfolio | สร้างโลกและประสบการณ์</title>
+    <title>PUWANAT | GAME DESIGNER</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Prompt:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
+        :root {
+            --bg-color: #050505;
+            --grid-color: rgba(255, 255, 255, 0.04);
+            --accent: #3b82f6; /* Blueprint Blue */
+        }
         body {
             font-family: 'Prompt', sans-serif;
+            background-color: var(--bg-color);
+            color: #d4d4d8;
+            /* Grid Background Pattern */
+            background-image: 
+                linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+                linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+            background-size: 40px 40px;
+            background-position: center top;
             scroll-behavior: smooth;
         }
-        .game-card:hover .card-overlay {
-            opacity: 1;
+        .font-mono {
+            font-family: 'Space Mono', monospace;
         }
-        .gradient-text {
-            background: linear-gradient(90deg, #6366f1, #a855f7);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .gdd-box {
+            background-color: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid #27272a;
+            border-left: 4px solid #27272a;
+            transition: all 0.3s ease;
         }
+        .gdd-box:hover {
+            border-left-color: var(--accent);
+            transform: translateX(4px);
+        }
+        .tag {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 0.2rem 0.6rem;
+            background-color: rgba(59, 130, 246, 0.1);
+            color: #60a5fa;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 2px;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-color); }
+        ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
     </style>
 </head>
-<body class="bg-slate-900 text-slate-100">
+<body class="selection:bg-blue-500/30 selection:text-blue-200">
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16 items-center">
-                <div class="text-xl font-bold gradient-text">GAMEDEV.PORT</div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="hover:text-indigo-400 transition">หน้าแรก</a>
-                    <a href="#projects" class="hover:text-indigo-400 transition">ผลงาน</a>
-                    <a href="#skills" class="hover:text-indigo-400 transition">ทักษะ</a>
-                    <a href="#process" class="hover:text-indigo-400 transition">ขั้นตอนการทำงาน</a>
-                    <a href="#contact" class="bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-lg transition text-white">ติดต่อ</a>
+    <!-- Top Bar (Engine Style) -->
+    <nav class="fixed top-0 w-full bg-[#050505]/90 backdrop-blur-md border-b border-zinc-800 z-50">
+        <div class="max-w-6xl mx-auto px-6 h-12 flex justify-between items-center text-xs font-mono text-zinc-400">
+            <div class="flex gap-6 items-center">
+                <span class="text-white font-bold tracking-widest">GDD_PORTFOLIO<span class="text-blue-500">.exe</span></span>
+                <div class="hidden sm:flex gap-4">
+                    <a href="#overview" class="hover:text-blue-400 transition">01_Overview</a>
+                    <a href="#systems" class="hover:text-blue-400 transition">02_Systems</a>
+                    <a href="#projects" class="hover:text-blue-400 transition">03_Case_Studies</a>
                 </div>
             </div>
+            <a href="mailto:puwanatwaitem07@gmail.com" class="flex items-center gap-2 hover:text-white transition">
+                <i data-lucide="mail" class="w-3 h-3"></i> Contact
+            </a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="pt-32 pb-20 px-4">
-        <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-indigo-400 font-semibold mb-4 tracking-widest uppercase">Game Designer & Level Designer</h2>
-            <h1 class="text-5xl md:text-7xl font-bold mb-6">สร้างสรรค์ <span class="gradient-text">ประสบการณ์</span><br>ที่ผู้เล่นจะไม่มีวันลืม</h1>
-            <p class="text-slate-400 max-w-2xl mx-auto text-lg mb-10">
-                ผมหลงใหลในการสร้างกลไกเกมที่สนุกและเนื้อเรื่องที่น่าติดตาม 
-                เชี่ยวชาญการออกแบบ System Design และสร้างสรรค์โลกผ่าน Level Design
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#projects" class="px-8 py-4 bg-indigo-600 hover:bg-indigo-700 rounded-full font-bold transition">ดูผลงานของฉัน</a>
-                <a href="#contact" class="px-8 py-4 border border-slate-700 hover:bg-slate-800 rounded-full font-bold transition">พูดคุยเรื่องโปรเจกต์</a>
+    <!-- Header / Hero -->
+    <header id="overview" class="pt-32 pb-20 px-6 max-w-6xl mx-auto">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-zinc-900 border border-zinc-800 rounded mb-6 text-xs font-mono text-zinc-400">
+            <div class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></div>
+            STATUS: SEEKING INTERNSHIP (CO-OP)
+        </div>
+        
+        <h1 class="text-5xl sm:text-7xl font-bold text-white mb-4 leading-tight">
+            PUWANAT <br class="sm:hidden">WAITEM
+        </h1>
+        <h2 class="text-xl sm:text-2xl font-mono text-blue-500 mb-10 flex items-center gap-3">
+            > GAME DESIGNER <span class="block w-4 h-5 bg-blue-500 animate-[pulse_1s_step-end_infinite]"></span>
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+                <p class="text-zinc-400 leading-relaxed mb-6">
+                    นักศึกษาพัฒนาเกม มหาวิทยาลัยเชียงใหม่ (CAMT) ที่มีเป้าหมายในการสร้างสรรค์ <strong>Core Gameplay Loops</strong> ที่สนุกและท้าทาย 
+                    ด้วยพื้นฐานจากสาย Technical Art ทำให้ผมสามารถเขียนโค้ด (C#) เพื่อทำ <strong>Rapid Prototyping</strong> 
+                    และประกอบฉาก (Greyboxing) บน Unity เพื่อทดสอบไอเดียระบบเกมได้ด้วยตัวเอง
+                </p>
+                <div class="flex gap-4 font-mono text-sm">
+                    <a href="#projects" class="px-6 py-3 bg-white text-black font-bold hover:bg-blue-500 hover:text-white transition rounded-sm flex items-center gap-2">
+                        READ_DOCS <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                    </a>
+                    <a href="#" class="px-6 py-3 border border-zinc-700 hover:border-zinc-500 transition rounded-sm flex items-center gap-2">
+                        <i data-lucide="github" class="w-4 h-4"></i> GITHUB
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Quick Stats/Info Box -->
+            <div class="gdd-box p-6 font-mono text-xs text-zinc-400 flex flex-col justify-center">
+                <div class="flex justify-between border-b border-zinc-800 pb-3 mb-3">
+                    <span>CLASS</span>
+                    <span class="text-white">Game Designer</span>
+                </div>
+                <div class="flex justify-between border-b border-zinc-800 pb-3 mb-3">
+                    <span>EDUCATION</span>
+                    <span class="text-white text-right">CMU (CAMT)<br>B.S. Digital Games (2023-Present)</span>
+                </div>
+                <div class="flex justify-between border-b border-zinc-800 pb-3 mb-3">
+                    <span>LATEST_ACHIEVEMENT</span>
+                    <span class="text-blue-400">2nd Place Winner (GGJ 2025)</span>
+                </div>
+                <div class="flex justify-between">
+                    <span>LOCATION</span>
+                    <span class="text-white">Chiang Mai / Chiang Rai</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Design Pillars -->
+    <section id="systems" class="py-20 border-y border-zinc-900 bg-[#050505]/50">
+        <div class="max-w-6xl mx-auto px-6">
+            <h3 class="font-mono text-sm text-zinc-500 mb-8 flex items-center gap-2">
+                <i data-lucide="layers" class="w-4 h-4"></i> DESIGN_PILLARS
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Pillar 1 -->
+                <div class="gdd-box p-8">
+                    <i data-lucide="settings-2" class="w-8 h-8 text-blue-500 mb-6"></i>
+                    <h4 class="text-white font-bold text-lg mb-3">System Design</h4>
+                    <p class="text-sm text-zinc-400 mb-6 line-clamp-3">
+                        ออกแบบและปรับสมดุล (Balancing) กฎเกณฑ์ของเกม สร้างความสัมพันธ์ระหว่างตัวแปรต่างๆ เพื่อให้เกิด Core Loop ที่ผู้เล่นอยากกลับมาเล่นซ้ำ
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tag">Economy</span>
+                        <span class="tag">Combat</span>
+                        <span class="tag">Balancing</span>
+                    </div>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="gdd-box p-8">
+                    <i data-lucide="map" class="w-8 h-8 text-blue-500 mb-6"></i>
+                    <h4 class="text-white font-bold text-lg mb-3">Level Design</h4>
+                    <p class="text-sm text-zinc-400 mb-6 line-clamp-3">
+                        วางผังทางเดิน (Layout) และจังหวะของเกม (Pacing) สร้าง Greybox เพื่อทดสอบ Flow ของผู้เล่นก่อนนำไปใส่ Art Assets จริง
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tag">Greyboxing</span>
+                        <span class="tag">Pacing</span>
+                        <span class="tag">Flow</span>
+                    </div>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="gdd-box p-8">
+                    <i data-lucide="terminal-square" class="w-8 h-8 text-blue-500 mb-6"></i>
+                    <h4 class="text-white font-bold text-lg mb-3">Technical Prototyping</h4>
+                    <p class="text-sm text-zinc-400 mb-6 line-clamp-3">
+                        สามารถใช้ C# และ Unity เขียนระบบต้นแบบขึ้นมาทดสอบความสนุก (Find the fun) ได้อย่างรวดเร็ว โดยไม่ต้องพึ่งพา Programmer ทุกขั้นตอน
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tag">Unity</span>
+                        <span class="tag">C#</span>
+                        <span class="tag">Blueprints</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Featured Projects -->
-    <section id="projects" class="py-20 bg-slate-800/50">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex justify-between items-end mb-12">
-                <div>
-                    <h2 class="text-3xl font-bold mb-2">ผลงานที่ภาคภูมิใจ</h2>
-                    <p class="text-slate-400">คัดสรรโปรเจกต์ที่แสดงศักยภาพในการออกแบบ</p>
-                </div>
-            </div>
+    <!-- Case Studies (Projects) -->
+    <section id="projects" class="py-24 max-w-6xl mx-auto px-6">
+        <h3 class="font-mono text-sm text-zinc-500 mb-12 flex items-center gap-2">
+            <i data-lucide="folder-open" class="w-4 h-4"></i> CASE_STUDIES / PROJECTS
+        </h3>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <div class="group relative overflow-hidden rounded-2xl bg-slate-800 border border-slate-700 transition-all hover:-translate-y-2">
-                    <div class="aspect-video bg-slate-700 flex items-center justify-center">
-                        <i data-lucide="gamepad-2" class="w-12 h-12 text-slate-500"></i>
-                        <span class="sr-only">ภาพโปรเจกต์เกมผจญภัย</span>
+        <div class="space-y-16">
+            
+            <!-- Project 1: Folkfall -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <!-- Media Section -->
+                <div class="lg:col-span-7 bg-zinc-900 aspect-video rounded border border-zinc-800 flex items-center justify-center relative overflow-hidden group">
+                    <!-- คำแนะนำสำหรับการใส่รูปสไตล์ GDD -->
+                    <div class="text-center p-6 z-10">
+                        <i data-lucide="monitor-play" class="w-12 h-12 text-zinc-700 mx-auto mb-3"></i>
+                        <p class="font-mono text-xs text-zinc-500">[Insert Gameplay GIF or Level Layout here]</p>
                     </div>
-                    <div class="p-6">
-                        <div class="text-xs text-indigo-400 font-bold mb-2 uppercase">Action RPG</div>
-                        <h3 class="text-xl font-bold mb-2">Project: Neon Blade</h3>
-                        <p class="text-slate-400 text-sm mb-4">ออกแบบ Combat System และ Enemy AI Behaviors ให้มีความท้าทาย</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-slate-700 text-[10px] rounded">Unity</span>
-                            <span class="px-2 py-1 bg-slate-700 text-[10px] rounded">C#</span>
-                            <span class="px-2 py-1 bg-slate-700 text-[10px] rounded">Systems Design</span>
-                        </div>
-                        <button class="text-indigo-400 text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all">
-                            อ่านกรณีศึกษา <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </button>
-                    </div>
+                    <!-- Background Grid for placeholder -->
+                    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 20px 20px;"></div>
                 </div>
-
-                <!-- Project 2 -->
-                <div class="group relative overflow-hidden rounded-2xl bg-slate-800 border border-slate-700 transition-all hover:-translate-y-2">
-                    <div class="aspect-video bg-slate-700 flex items-center justify-center">
-                        <i data-lucide="map" class="w-12 h-12 text-slate-500"></i>
-                        <span class="sr-only">ภาพโปรเจกต์ออกแบบฉาก</span>
-                    </div>
-                    <div class="p-6">
-                        <div class="text-xs text-indigo-400 font-bold mb-2 uppercase">Puzzle Platformer</div>
-                        <h3 class="text-xl font-bold mb-2">Echoes of Silence</h3>
-                        <p class="text-slate-400 text-sm mb-4">เน้นการออกแบบ Level Design ที่สื่อสารเนื้อเรื่องผ่านสภาพแวดล้อม</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-slate-700 text-[10px] rounded">Unreal Engine</span>
-                            <span class="px-2 py-1 bg-slate-700 text-[10px] rounded">Blueprints</span>
-                            <span class="px-2 py-1 bg-slate-700 text-[10px] rounded">Level Design</span>
-                        </div>
-                        <button class="text-indigo-400 text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all">
-                            อ่านกรณีศึกษา <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="group relative overflow-hidden rounded-2xl bg-slate-800 border border-slate-700 transition-all hover:-translate-y-2">
-                    <div class="aspect-video bg-slate-700 flex items-center justify-center">
-                        <i data-lucide="layout" class="w-12 h-12 text-slate-500"></i>
-                        <span class="sr-only">ภาพโปรเจกต์ UI/UX เกม</span>
-                    </div>
-                    <div class="p-6">
-                        <div class="text-xs text-indigo-400 font-bold mb-2 uppercase">Strategy Game</div>
-                        <h3 class="text-xl font-bold mb-2">Galactic Command</h3>
-                        <p class="text-slate-400 text-sm mb-4">ออกแบบ UI/UX และ Resource Management System ที่ซับซ้อนให้เข้าใจง่าย</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-slate-700 text-[10px] rounded">Figma</span>
-                            <span class="px-2 py-1 bg-slate-700 text-[10px] rounded">Economy Balance</span>
-                            <span class="px-2 py-1 bg-slate-700 text-[10px] rounded">UX Research</span>
-                        </div>
-                        <button class="text-indigo-400 text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all">
-                            อ่านกรณีศึกษา <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-20">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-12 text-center">ทักษะและความเชี่ยวชาญ</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 
-                <div class="p-6 rounded-2xl bg-slate-800 border border-slate-700">
-                    <i data-lucide="cpu" class="w-10 h-10 text-indigo-500 mb-4"></i>
-                    <h3 class="font-bold mb-2">Game Engines</h3>
-                    <ul class="text-slate-400 text-sm space-y-1">
-                        <li>• Unity (Advanced)</li>
-                        <li>• Unreal Engine (Intermediate)</li>
-                        <li>• Godot</li>
-                    </ul>
+                <!-- Content Section -->
+                <div class="lg:col-span-5 flex flex-col justify-center">
+                    <div class="flex gap-2 mb-3">
+                        <span class="tag bg-blue-500/20 text-blue-400 border-blue-500/30">Action RPG</span>
+                        <span class="tag">System Design</span>
+                    </div>
+                    <h4 class="text-3xl font-bold text-white mb-2">Folkfall</h4>
+                    <p class="text-zinc-500 text-sm font-mono mb-6">Role: Game Designer & Technical Artist</p>
+                    
+                    <!-- Design Notes -->
+                    <div class="space-y-4 mb-6">
+                        <div class="gdd-box p-4 border-l-blue-500">
+                            <h5 class="text-white text-sm font-bold mb-1">Design Goal</h5>
+                            <p class="text-zinc-400 text-sm">ออกแบบระบบ Combat สไตล์ Soul-like ให้ผู้เล่นรู้สึกตึงเครียดและท้าทายผ่านกลไกการหลบหลีก (Dodge/Parry)</p>
+                        </div>
+                        <div class="gdd-box p-4">
+                            <h5 class="text-white text-sm font-bold mb-1">My Contribution</h5>
+                            <ul class="text-zinc-400 text-sm list-disc pl-4 space-y-1">
+                                <li>ออกแบบพฤติกรรมศัตรู (Enemy Behaviors) และบอส</li>
+                                <li>วางผังด่าน (Level Design) เพื่อสนับสนุน Flow การต่อสู้</li>
+                                <li>ทำ Prototype สกิลและจังหวะการโจมตีใน Unity</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <button class="font-mono text-sm text-white hover:text-blue-400 flex items-center gap-2 transition">
+                        [ Read Full Design Doc <i data-lucide="external-link" class="w-4 h-4"></i> ]
+                    </button>
                 </div>
-
-                <div class="p-6 rounded-2xl bg-slate-800 border border-slate-700">
-                    <i data-lucide="pen-tool" class="w-10 h-10 text-indigo-500 mb-4"></i>
-                    <h3 class="font-bold mb-2">Design Tools</h3>
-                    <ul class="text-slate-400 text-sm space-y-1">
-                        <li>• Figma (UI/UX)</li>
-                        <li>• Adobe Creative Suite</li>
-                        <li>• Blender (Grayboxing)</li>
-                    </ul>
-                </div>
-
-                <div class="p-6 rounded-2xl bg-slate-800 border border-slate-700">
-                    <i data-lucide="brain" class="w-10 h-10 text-indigo-500 mb-4"></i>
-                    <h3 class="font-bold mb-2">Design Skills</h3>
-                    <ul class="text-slate-400 text-sm space-y-1">
-                        <li>• System Design & Balancing</li>
-                        <li>• Narrative Design</li>
-                        <li>• Economy Design</li>
-                    </ul>
-                </div>
-
-                <div class="p-6 rounded-2xl bg-slate-800 border border-slate-700">
-                    <i data-lucide="users" class="w-10 h-10 text-indigo-500 mb-4"></i>
-                    <h3 class="font-bold mb-2">Soft Skills</h3>
-                    <ul class="text-slate-400 text-sm space-y-1">
-                        <li>• Agile / Scrum</li>
-                        <li>• Communication</li>
-                        <li>• Rapid Prototyping</li>
-                    </ul>
-                </div>
-
             </div>
+
+            <!-- Project 2: Bubblow -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <!-- Content Section (Left on Desktop) -->
+                <div class="lg:col-span-5 flex flex-col justify-center order-2 lg:order-1">
+                    <div class="flex gap-2 mb-3">
+                        <span class="tag bg-yellow-500/20 text-yellow-400 border-yellow-500/30">Game Jam (2nd Place)</span>
+                        <span class="tag">Core Loop Design</span>
+                    </div>
+                    <h4 class="text-3xl font-bold text-white mb-2">Bubblow</h4>
+                    <p class="text-zinc-500 text-sm font-mono mb-6">Role: Game Designer & UI</p>
+                    
+                    <!-- Design Notes -->
+                    <div class="space-y-4 mb-6">
+                        <div class="gdd-box p-4 border-l-yellow-500">
+                            <h5 class="text-white text-sm font-bold mb-1">The Challenge (48 Hours)</h5>
+                            <p class="text-zinc-400 text-sm">สร้างเกม 2D Shooter ที่เรียบง่ายแต่เสพติด (Easy to learn, Hard to master) ภายใต้ข้อจำกัดของเวลา</p>
+                        </div>
+                        <div class="gdd-box p-4">
+                            <h5 class="text-white text-sm font-bold mb-1">Execution</h5>
+                            <ul class="text-zinc-400 text-sm list-disc pl-4 space-y-1">
+                                <li>ออกแบบ Mechanics หลัก: พาฟองสบู่ขึ้นสู่ผิวน้ำพร้อมบริหารขนาด</li>
+                                <li>Balancing ความยากของเกมเพลย์อย่างรวดเร็ว</li>
+                                <li>ประสานงานกับทีม Art และ Dev เพื่อให้รวมโค้ดทันเวลา</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <button class="font-mono text-sm text-white hover:text-blue-400 flex items-center gap-2 transition">
+                        [ Play on Itch.io <i data-lucide="play-circle" class="w-4 h-4"></i> ]
+                    </button>
+                </div>
+
+                <!-- Media Section (Right on Desktop) -->
+                <div class="lg:col-span-7 bg-zinc-900 aspect-video rounded border border-zinc-800 flex items-center justify-center relative overflow-hidden group order-1 lg:order-2">
+                    <div class="text-center p-6 z-10">
+                        <i data-lucide="monitor-play" class="w-12 h-12 text-zinc-700 mx-auto mb-3"></i>
+                        <p class="font-mono text-xs text-zinc-500">[Insert Bubblow Screenshot here]</p>
+                    </div>
+                    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 20px 20px;"></div>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- Work Process -->
-    <section id="process" class="py-20 bg-indigo-900/20">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-12 text-center">วิธีที่ผมทำงาน</h2>
-            <div class="space-y-12">
-                <div class="flex gap-6">
-                    <div class="flex-none w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center font-bold">1</div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-2">Research & Ideation</h3>
-                        <p class="text-slate-400">วิเคราะห์กลุ่มเป้าหมาย ค้นหาแนวทางเกมที่น่าสนใจ และกำหนด Core Loop ของเกม</p>
-                    </div>
+    <!-- Tools / Footer -->
+    <footer class="border-t border-zinc-900 bg-[#020202] pt-16 pb-8 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
+            <div>
+                <h4 class="font-mono text-white mb-2">SOFTWARE_&_TOOLS</h4>
+                <div class="flex flex-wrap gap-2">
+                    <span class="tag">Unity 3D/2D</span>
+                    <span class="tag">C#</span>
+                    <span class="tag">Figma</span>
+                    <span class="tag">Blender</span>
+                    <span class="tag">Git</span>
+                    <span class="tag">Miro / Notion</span>
                 </div>
-                <div class="flex gap-6">
-                    <div class="flex-none w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center font-bold">2</div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-2">Prototyping</h3>
-                        <p class="text-slate-400">สร้างต้นแบบอย่างรวดเร็ว (Greyboxing) เพื่อทดสอบว่า Mechanic นั้น "สนุก" จริงหรือไม่ก่อนลงรายละเอียด</p>
-                    </div>
-                </div>
-                <div class="flex gap-6">
-                    <div class="flex-none w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center font-bold">3</div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-2">Playtesting & Iteration</h3>
-                        <p class="text-slate-400">เก็บข้อมูลจากการเล่นจริง ปรับจูน (Balancing) และพัฒนาซ้ำจนกว่าจะได้ประสบการณ์ที่สมบูรณ์</p>
-                    </div>
-                </div>
+            </div>
+            
+            <div class="text-left md:text-right font-mono text-sm text-zinc-500">
+                <p class="mb-1">AVAILABLE_FOR_INTERNSHIP</p>
+                <a href="mailto:puwanatwaitem07@gmail.com" class="text-blue-400 hover:text-blue-300">puwanatwaitem07@gmail.com</a><br>
+                <span>+66 80-120-9979</span>
             </div>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 px-4 text-center">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-4xl font-bold mb-6">เริ่มสร้างโปรเจกต์ใหม่ด้วยกัน</h2>
-            <p class="text-slate-400 mb-10">ผมพร้อมเสมอสำหรับการพูดคุยเรื่องเกมใหม่ๆ หรือการร่วมงานที่ท้าทาย</p>
-            <div class="flex flex-wrap justify-center gap-6">
-                <a href="mailto:yourname@email.com" class="flex items-center gap-2 hover:text-indigo-400 transition">
-                    <i data-lucide="mail"></i> yourname@email.com
-                </a>
-                <a href="#" class="flex items-center gap-2 hover:text-indigo-400 transition">
-                    <i data-lucide="linkedin"></i> LinkedIn
-                </a>
-                <a href="#" class="flex items-center gap-2 hover:text-indigo-400 transition">
-                    <i data-lucide="github"></i> GitHub (Dev Log)
-                </a>
-            </div>
-            <div class="mt-16 pt-8 border-t border-slate-800 text-slate-500 text-sm">
-                &copy; 2024 Game Designer Portfolio. Built with Passion.
+        
+        <div class="max-w-6xl mx-auto border-t border-zinc-900 pt-8 flex justify-between items-center text-xs font-mono text-zinc-600">
+            <p>SYSTEM.EXIT(0); // © 2026 PUWANAT W.</p>
+            <div class="flex gap-4">
+                <a href="#" class="hover:text-white transition">GITHUB</a>
+                <a href="#" class="hover:text-white transition">LINKEDIN</a>
             </div>
         </div>
-    </section>
+    </footer>
 
     <script>
-        // Initialize Lucide icons
         lucide.createIcons();
-
-        // Smooth scroll adjustment for fixed header
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
     </script>
 </body>
 </html>
