@@ -59,7 +59,7 @@
 </head>
 <body class="selection:bg-blue-500/30 selection:text-blue-200">
 
-    <!-- Top Bar -->
+    <!-- Top Bar (Engine Style) -->
     <nav class="fixed top-0 w-full bg-[#050505]/90 backdrop-blur-md border-b border-zinc-800 z-50">
         <div class="max-w-6xl mx-auto px-6 h-12 flex justify-between items-center text-xs font-mono text-zinc-400">
             <div class="flex gap-6 items-center">
@@ -79,7 +79,9 @@
     <!-- Header / Hero -->
     <header id="overview" class="pt-32 pb-20 px-6 max-w-6xl mx-auto">
         
+        <!-- Profile Image & Name Section -->
         <div class="flex flex-col md:flex-row gap-8 lg:gap-12 items-center md:items-start mb-12">
+            
             <!-- Profile Image -->
             <div class="relative w-48 h-48 md:w-56 md:h-56 flex-shrink-0 group">
                 <div class="absolute inset-0 border border-blue-500/30 translate-x-3 translate-y-3 transition-transform duration-300 group-hover:translate-x-4 group-hover:translate-y-4"></div>
@@ -123,7 +125,6 @@
                 </div>
             </div>
             
-            <!-- Quick Stats/Info Box -->
             <div class="gdd-box p-6 font-mono text-xs text-zinc-400 flex flex-col justify-center">
                 <div class="flex justify-between border-b border-zinc-800 pb-3 mb-3">
                     <span>CLASS</span>
@@ -200,26 +201,26 @@
                 <div class="lg:col-span-5 flex flex-col justify-center">
                     <div class="flex gap-2 mb-3">
                         <span class="tag bg-red-500/20 text-red-400 border-red-500/30">Horror / Puzzle</span>
-                        <span class="tag">Level Design</span><span class="tag">Narrative</span>
+                        <span class="tag">Narrative Design</span><span class="tag">Level Design</span>
                     </div>
-                    <h4 class="text-3xl font-bold text-white mb-2">SURASAK</h4>
-                    <p class="text-zinc-500 text-sm font-mono mb-6">Role: Game Designer</p>
+                    <h4 class="text-3xl font-bold text-white mb-2 uppercase tracking-tighter">SURASAK</h4>
+                    <p class="text-zinc-500 text-sm font-mono mb-6 italic">Role: Lead Game Designer</p>
                     <div class="space-y-4 mb-6">
                         <div class="gdd-box p-4 border-l-red-500" style="border-left-color: #ef4444;">
-                            <h5 class="text-white text-sm font-bold mb-1">Design Goal</h5>
-                            <p class="text-zinc-400 text-sm">สร้างประสบการณ์เกมแนวสยองขวัญ-ไขปริศนา 2D Side-scrolling ที่เน้นความกดดันและการตัดสินใจที่มีผลต่อฉากจบ</p>
+                            <h5 class="text-white text-sm font-bold mb-1 uppercase font-mono">Design Objective</h5>
+                            <p class="text-zinc-400 text-sm">สร้างประสบการณ์ความสยองขวัญเชิงจิตวิทยาผ่านระบบการตัดสินใจ (Decision-making) ที่ส่งผลต่อฉากจบหลากหลายรูปแบบ</p>
                         </div>
                         <div class="gdd-box p-4">
-                            <h5 class="text-white text-sm font-bold mb-1">My Contribution</h5>
+                            <h5 class="text-white text-sm font-bold mb-1 uppercase font-mono">Key Accomplishments</h5>
                             <ul class="text-zinc-400 text-sm list-disc pl-4 space-y-1">
-                                <li>ร่างแบบแปลนฉาก 2D และกำหนดจุด Interact</li>
-                                <li>ออกแบบตำนานศัตรู "เจ้าแม่ลัทธิ" และ Storyboard</li>
-                                <li>กำหนดเส้นทาง Main Story และ Alternative Endings</li>
+                                <li>ออกแบบ World Building & Narrative Flow ของเกม</li>
+                                <li>ร่างผัง Level Design เชิงเทคนิค ระบุจุด Interact & Pacing</li>
+                                <li>สร้าง Storyboard สำหรับ Cinematic Trailer</li>
                             </ul>
                         </div>
                     </div>
                     <button onclick="openModal('modal-surasak')" class="font-mono text-sm text-white hover:text-red-400 flex items-center gap-2 transition">
-                        [ View Full GDD & Sketches <i data-lucide="external-link" class="w-4 h-4"></i> ]
+                        [ Open Full Design Document <i data-lucide="file-text" class="w-4 h-4"></i> ]
                     </button>
                 </div>
             </div>
@@ -232,17 +233,17 @@
                         <span class="tag">Game Architecture</span><span class="tag">UI/UX Flow</span>
                     </div>
                     <h4 class="text-3xl font-bold text-white mb-2">Folkfall (Unhoused Mind)</h4>
-                    <p class="text-zinc-500 text-sm font-mono mb-6">Role: Game Designer & Technical Artist</p>
+                    <p class="text-zinc-500 text-sm font-mono mb-6 italic">Role: Game Designer & Technical Artist</p>
                     <div class="space-y-4 mb-6">
                         <div class="gdd-box p-4 border-l-blue-500">
-                            <h5 class="text-white text-sm font-bold mb-1">Design Goal</h5>
-                            <p class="text-zinc-400 text-sm">ออกแบบระบบ Combat สไตล์ Soul-like ให้ผู้เล่นรู้สึกตึงเครียดและท้าทาย พร้อมการเล่าเรื่องเชิงจิตวิทยา</p>
+                            <h5 class="text-white text-sm font-bold mb-1 uppercase font-mono">Design Goal</h5>
+                            <p class="text-zinc-400 text-sm">ออกแบบระบบ Combat สไตล์ Soul-like ให้ผู้เล่นรู้สึกตึงเครียดและท้าทาย พร้อมการออกแบบ Narrative Flow เพื่อเล่าเรื่องราวเชิงจิตวิทยา</p>
                         </div>
                         <div class="gdd-box p-4">
-                            <h5 class="text-white text-sm font-bold mb-1">My Contribution</h5>
+                            <h5 class="text-white text-sm font-bold mb-1 uppercase font-mono">My Contribution</h5>
                             <ul class="text-zinc-400 text-sm list-disc pl-4 space-y-1">
                                 <li>สร้าง Design Board รวบรวมระบบทั้งหมด (State Machine, Map Layout)</li>
-                                <li>ใช้ Figma สร้าง Paper Prototype และ Narrative Flow</li>
+                                <li>ใช้ Figma สร้าง Paper Prototype และหน้าจอ UI</li>
                                 <li>ออกแบบพฤติกรรมศัตรูและการต่อสู้กับบอส</li>
                             </ul>
                         </div>
@@ -257,7 +258,7 @@
                     </div>
                 </div>
                 <div class="lg:col-span-7 bg-zinc-900 aspect-[4/3] lg:aspect-video rounded border border-zinc-800 flex items-center justify-center relative overflow-hidden group order-1 lg:order-2">
-                    <i data-lucide="layout-dashboard" class="w-12 h-12 text-zinc-700 mx-auto mb-3"></i>
+                    <img src="image_8c23be.png" alt="Folkfall Design Board" class="w-full h-full object-cover opacity-60">
                 </div>
             </div>
 
@@ -272,17 +273,17 @@
                 <div class="lg:col-span-5 flex flex-col justify-center">
                     <div class="flex gap-2 mb-3">
                         <span class="tag bg-yellow-500/20 text-yellow-400 border-yellow-500/30">Game Jam (3rd Place)</span>
-                        <span class="tag">Core Loop Design</span><span class="tag">UI/UX</span>
+                        <span class="tag">Core Loop Design</span>
                     </div>
-                    <h4 class="text-3xl font-bold text-white mb-2">Bubblow</h4>
-                    <p class="text-zinc-500 text-sm font-mono mb-6">Role: Game Designer & UI</p>
+                    <h4 class="text-3xl font-bold text-white mb-2 uppercase">BUBBLOW</h4>
+                    <p class="text-zinc-300 text-sm italic font-mono mb-6">Role: Designer & UI</p>
                     <div class="space-y-4 mb-6">
                         <div class="gdd-box p-4 border-l-yellow-500" style="border-left-color: #eab308;">
-                            <h5 class="text-white text-sm font-bold mb-1">The Challenge (48 Hours)</h5>
-                            <p class="text-zinc-400 text-sm">ออกแบบความสนุกที่เข้าถึงง่ายในธีมของ Bubble ภายใต้ความกดดันของการแข่งขัน Game Jam</p>
+                            <h5 class="text-white text-sm font-bold mb-1 uppercase font-mono">The Challenge</h5>
+                            <p class="text-zinc-400 text-sm">สร้างความสนุกที่เข้าถึงง่ายในธีม Bubble ภายใต้ความกดดันของการแข่งขัน 48 ชั่วโมง (Global Game Jam)</p>
                         </div>
                         <div class="gdd-box p-4">
-                            <h5 class="text-white text-sm font-bold mb-1">Execution</h5>
+                            <h5 class="text-white text-sm font-bold mb-1 uppercase font-mono">Execution</h5>
                             <ul class="text-zinc-400 text-sm list-disc pl-4 space-y-1">
                                 <li>ออกแบบ Mechanics: การบริหารขนาดฟองสบู่</li>
                                 <li>Game Balancing: ปรับจูนความยากของศัตรูแต่ละเฟส</li>
@@ -309,14 +310,14 @@
                         <span class="tag">AI Behavior</span><span class="tag">UI Wireframe</span>
                     </div>
                     <h4 class="text-3xl font-bold text-white mb-2">Furry War</h4>
-                    <p class="text-zinc-500 text-sm font-mono mb-6">Role: Game Designer</p>
+                    <p class="text-zinc-500 text-sm font-mono mb-6 italic">Role: Game Designer</p>
                     <div class="space-y-4 mb-6">
                         <div class="gdd-box p-4 border-l-green-500" style="border-left-color: #22c55e;">
-                            <h5 class="text-white text-sm font-bold mb-1">Design Goal</h5>
+                            <h5 class="text-white text-sm font-bold mb-1 uppercase font-mono">Design Objective</h5>
                             <p class="text-zinc-400 text-sm">ออกแบบโครงสร้างเกมเพลย์ Turn-Based Strategy ที่ต้องคำนวณทิศทางแรงยิง พร้อมระบบ AI ที่ตัดสินใจตามสถานการณ์</p>
                         </div>
                         <div class="gdd-box p-4">
-                            <h5 class="text-white text-sm font-bold mb-1">My Contribution</h5>
+                            <h5 class="text-white text-sm font-bold mb-1 uppercase font-mono">My Contribution</h5>
                             <ul class="text-zinc-400 text-sm list-disc pl-4 space-y-1">
                                 <li>ร่าง Wireframe หน้าจอ UI (Main Menu, Character Select)</li>
                                 <li>ออกแบบ AI Behavior System (Logic การต่อสู้และหลบหนี)</li>
@@ -328,7 +329,7 @@
                         [ View Design Docs & Gallery <i data-lucide="external-link" class="w-4 h-4"></i> ]
                     </button>
                 </div>
-                <div class="lg:col-span-7 bg-zinc-900 aspect-[4/3] lg:aspect-video rounded border border-zinc-800 flex items-center justify-center relative overflow-hidden group cursor-pointer" onclick="openModal('modal-furrywar')">
+                <div class="lg:col-span-7 bg-zinc-900 aspect-[4/3] lg:aspect-video rounded border border-zinc-800 flex items-center justify-center relative overflow-hidden group cursor-pointer order-1 lg:order-2" onclick="openModal('modal-furrywar')">
                     <img src="fjygBW.png" alt="Furry War Cover" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition duration-500 scale-100 group-hover:scale-105">
                     <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
                         <span class="font-mono text-white flex items-center gap-2 border border-white/50 bg-black/50 px-4 py-2 rounded"><i data-lucide="external-link" class="w-4 h-4"></i> View Details</span>
@@ -364,7 +365,7 @@
                 </div>
                 <div class="gdd-box p-6 md:col-span-2 lg:col-span-2" style="border-left-color: #ef4444;">
                     <h4 class="text-white font-mono text-sm mb-4 flex items-center gap-2"><i data-lucide="code" class="w-4 h-4 text-red-500"></i> IDE & VERSION CONTROL</h4>
-                    <div class="flex flex-wrap gap-2"><span class="tag">Visual Studio</span><span class="tag">VS Code</span><span class="tag">JetBrains Rider</span><span class="tag">Git</span></div>
+                    <div class="flex flex-wrap gap-2"><span class="tag">Visual Studio</span><span class="tag">VS Code</span><span class="tag">Git</span></div>
                 </div>
             </div>
         </div>
@@ -374,11 +375,11 @@
     <footer class="border-t border-zinc-900 bg-[#020202] pt-16 pb-8 px-6">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
             <div class="text-left font-mono text-zinc-500">
-                <h4 class="text-white text-lg font-bold mb-1 tracking-widest">PUWANAT WAITEM</h4>
+                <h4 class="text-white text-lg font-bold mb-1 tracking-widest uppercase">PUWANAT WAITEM</h4>
                 <p class="text-xs tracking-[0.2em]">GAME DESIGNER</p>
             </div>
             <div class="text-left md:text-right font-mono text-sm text-zinc-500">
-                <p class="mb-1">AVAILABLE FOR INTERNSHIP</p>
+                <p class="mb-1 uppercase">Available for Internship</p>
                 <a href="mailto:puwanat_waitem@cmu.ac.th" class="text-blue-400 hover:text-blue-300 transition">puwanat_waitem@cmu.ac.th</a><br>
                 <span>+66 80-120-9979</span>
             </div>
@@ -397,35 +398,91 @@
         <div class="absolute inset-0 bg-black/95 backdrop-blur-md" onclick="closeModal('modal-surasak')"></div>
         <div class="absolute inset-x-0 top-5 bottom-5 md:top-10 md:bottom-10 mx-auto max-w-5xl bg-[#0a0a0a] border border-zinc-800 rounded-lg overflow-hidden flex flex-col shadow-2xl">
             <div class="p-4 border-b border-zinc-800 flex justify-between items-center bg-[#050505]">
-                <h3 class="text-sm md:text-xl font-bold text-white font-mono flex items-center gap-2"><i data-lucide="file-text" class="w-5 h-5 text-red-500"></i> SURASAK GDD Document</h3>
+                <h3 class="text-sm md:text-xl font-bold text-white font-mono flex items-center gap-2"><i data-lucide="file-text" class="w-5 h-5 text-red-500"></i> SURASAK_GDD_Full_Documentation.pdf</h3>
                 <button onclick="closeModal('modal-surasak')" class="text-zinc-400 hover:text-white transition p-1 bg-zinc-900 rounded"><i data-lucide="x"></i></button>
             </div>
-            <div class="p-6 md:p-10 overflow-y-auto space-y-16">
-                <div class="text-center border-b border-zinc-800 pb-8">
-                    <h2 class="text-4xl md:text-5xl font-bold text-red-500 mb-2 tracking-widest uppercase">SURASAK</h2>
-                    <p class="text-zinc-400 font-mono text-sm">2D Horror / Puzzle / Side-scrolling</p>
+            <div class="p-6 md:p-10 overflow-y-auto space-y-20">
+                
+                <div class="text-center border-b border-zinc-800 pb-12">
+                    <h2 class="text-5xl md:text-7xl font-bold text-red-600 mb-4 tracking-widest uppercase">SURASAK</h2>
+                    <div class="flex justify-center gap-4 mb-6">
+                        <span class="tag">2D Psychological Horror</span>
+                        <span class="tag">Narrative Puzzle</span>
+                        <span class="tag">Side-scrolling</span>
+                    </div>
+                    <p class="text-zinc-400 max-w-2xl mx-auto leading-relaxed">
+                        โปรเจกต์เกมสยองขวัญที่เน้นการเล่าเรื่องผ่านบรรยากาศ (Environmental Storytelling) และการออกแบบฉากที่มีรายละเอียดลึกซึ้ง ผู้เล่นจะได้รับบทเป็นตัวละครที่ต้องเอาชีวิตรอดจากการไล่ล่าและไขปริศนาท่ามกลางตำนานลึกลับ
+                    </p>
                 </div>
-                <div class="space-y-4">
-                    <h4 class="text-xl font-bold text-white flex items-center gap-2"><span class="text-red-500 font-mono">01.</span> Main Story & Background</h4>
-                    <p class="text-zinc-400 text-sm">โครงสร้างเรื่องราว และ Mindmap ของโลกในเกม</p>
-                    <div class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden"><img src="image_8c9934.png" alt="SURASAK Background Mindmap" class="w-full h-auto"></div>
-                </div>
-                <div class="space-y-4">
-                    <h4 class="text-xl font-bold text-white flex items-center gap-2"><span class="text-red-500 font-mono">02.</span> Level Design Sketches</h4>
-                    <p class="text-zinc-400 text-sm">ร่างแบบแปลนฉาก 2D ห้องต่างๆ และตำแหน่งวัตถุในเกม</p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="bg-zinc-900 border border-zinc-800 rounded-lg aspect-video flex items-center justify-center"><p class="text-zinc-600 font-mono text-xs">[ รูปภาพ Level Design - ห้องรับแขก ]</p></div>
-                        <div class="bg-zinc-900 border border-zinc-800 rounded-lg aspect-video flex items-center justify-center"><p class="text-zinc-600 font-mono text-xs">[ รูปภาพ Level Design - ห้องครัว ]</p></div>
-                        <div class="bg-zinc-900 border border-zinc-800 rounded-lg aspect-video flex items-center justify-center"><p class="text-zinc-600 font-mono text-xs">[ รูปภาพ Level Design - ห้องใต้ดิน ]</p></div>
-                        <div class="bg-zinc-900 border border-zinc-800 rounded-lg aspect-video flex items-center justify-center"><p class="text-zinc-600 font-mono text-xs">[ รูปภาพ Level Design - ระเบียง ]</p></div>
+
+                <div class="space-y-8">
+                    <div class="border-l-4 border-red-600 pl-6">
+                        <h4 class="text-2xl font-bold text-white font-mono uppercase tracking-tighter">01. Narrative Design & World Building</h4>
+                        <p class="text-zinc-400 text-sm mt-2 font-mono">Exploring the lore of 'Jao Mae' and cinematic storytelling.</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 gap-12">
+                        <div class="space-y-4">
+                            <h5 class="text-zinc-300 font-bold uppercase text-xs tracking-widest font-mono">Lore & Character Background</h5>
+                            <img src="SURASAK_Design เจ้าแม่.png" alt="Enemy Lore Design" class="w-full h-auto rounded-lg border border-zinc-800">
+                        </div>
+                        <div class="space-y-4">
+                            <h5 class="text-zinc-300 font-bold uppercase text-xs tracking-widest font-mono">Cinematic Storyboarding</h5>
+                            <img src="SURASAK_Storyboard.png" alt="Trailer Storyboard" class="w-full h-auto rounded-lg border border-zinc-800">
+                        </div>
                     </div>
                 </div>
-                <div class="space-y-4">
-                    <h4 class="text-xl font-bold text-white flex items-center gap-2"><span class="text-red-500 font-mono">03.</span> Enemy Lore & Storyboard</h4>
-                    <div class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden mb-6"><img src="image_8c98f7.png" alt="Enemy Lore Jao Mae" class="w-full h-auto"></div>
-                    <p class="text-zinc-400 text-sm">Storyboard สำหรับ Cinematic Trailer ของเกม</p>
-                    <div class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden"><img src="image_8c9c16.png" alt="Storyboard Trailer" class="w-full h-auto"></div>
+
+                <div class="space-y-8">
+                    <div class="border-l-4 border-red-600 pl-6">
+                        <h4 class="text-2xl font-bold text-white font-mono uppercase tracking-tighter">02. Core Gameplay Loop & Progression</h4>
+                        <p class="text-zinc-400 text-sm mt-2 font-mono">Designing the main flow and alternative outcome logic.</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                        <div class="space-y-4">
+                            <h5 class="text-zinc-300 font-bold uppercase text-xs tracking-widest font-mono">Main Story Flowchart</h5>
+                            <img src="SURASAK_Main Story.png" alt="Main Story Progression" class="w-full h-auto rounded-lg border border-zinc-800">
+                        </div>
+                        <div class="space-y-4">
+                            <h5 class="text-zinc-300 font-bold uppercase text-xs tracking-widest font-mono">Background Mindmap</h5>
+                            <img src="image_8c9934.png" alt="SURASAK Mindmap" class="w-full h-auto rounded-lg border border-zinc-800">
+                        </div>
+                    </div>
                 </div>
+
+                <div class="space-y-8">
+                    <div class="border-l-4 border-red-600 pl-6">
+                        <h4 class="text-2xl font-bold text-white font-mono uppercase tracking-tighter">03. Level Architecture & UX Design</h4>
+                        <p class="text-zinc-400 text-sm mt-2 font-mono">Technical drafting of interactables and spatial pacing.</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 gap-12">
+                        <div class="space-y-4">
+                            <h5 class="text-zinc-300 font-bold uppercase text-xs tracking-widest font-mono">Level Layout Drafting (Set 01)</h5>
+                            <img src="SURASAK_Level Design 1.png" alt="Level Design Set 1" class="w-full h-auto rounded-lg border border-zinc-800">
+                        </div>
+                        <div class="space-y-4">
+                            <h5 class="text-zinc-300 font-bold uppercase text-xs tracking-widest font-mono">Technical Sketches & Objects (Set 02)</h5>
+                            <img src="SURASAK_Level Design 2.png" alt="Level Design Set 2" class="w-full h-auto rounded-lg border border-zinc-800">
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="space-y-4">
+                                <h5 class="text-zinc-300 font-bold uppercase text-xs tracking-widest font-mono">UI/UX & Mechanics (Set 03)</h5>
+                                <img src="SURASAK_Level Design 3.png" alt="Level Design Set 3" class="w-full h-auto rounded-lg border border-zinc-800">
+                            </div>
+                            <div class="bg-zinc-900/50 p-8 rounded-lg flex flex-col justify-center border border-zinc-800">
+                                <h5 class="text-white font-bold mb-4 font-mono uppercase">Design Notes</h5>
+                                <ul class="text-zinc-400 text-sm space-y-4">
+                                    <li class="flex gap-3"><span class="text-red-500 font-mono">01</span> การวาง Greybox เน้น Pacing การเดินของผู้เล่นเพื่อให้เกิดความกดดันสูงสุด</li>
+                                    <li class="flex gap-3"><span class="text-red-500 font-mono">02</span> ออกแบบจุด Interact ให้สอดคล้องกับ Sanity & Stamina Mechanics</li>
+                                    <li class="flex gap-3"><span class="text-red-500 font-mono">03</span> ใช้ Environmental Storytelling เพื่อบอกใบ้ Puzzle โดยไม่ต้องใช้ Text</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -440,19 +497,22 @@
             </div>
             <div class="p-6 md:p-10 overflow-y-auto space-y-12">
                 <div class="text-center border-b border-zinc-800 pb-8">
-                    <h2 class="text-4xl md:text-5xl font-bold text-yellow-500 mb-4 tracking-widest uppercase">BUBBLOW</h2>
-                    <p class="text-zinc-300 text-sm max-w-2xl mx-auto leading-relaxed mb-6">ผลงาน Global Game Jam 2025 รางวัลอันดับ 3 (Chiang Mai) หน้าที่ Game Designer & UI Designer</p>
-                    <a href="https://bearryalen.itch.io/bubblow" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-yellow-500 text-black font-bold hover:bg-yellow-400 transition rounded-sm font-mono text-sm"><i data-lucide="play-circle" class="w-5 h-5"></i> PLAY ON ITCH.IO</a>
+                    <h2 class="text-4xl md:text-5xl font-bold text-yellow-500 mb-4 uppercase tracking-widest">BUBBLOW</h2>
+                    <p class="text-zinc-300 text-sm max-w-2xl mx-auto mb-6">ผลงาน Global Game Jam 2025 รางวัลอันดับ 3 (Chiang Mai) หน้าที่ Game Designer & UI Designer</p>
+                    <a href="https://bearryalen.itch.io/bubblow" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-yellow-500 text-black font-bold hover:bg-yellow-400 transition rounded-sm font-mono text-sm uppercase"><i data-lucide="play-circle" class="w-5 h-5"></i> Play on Itch.io</a>
                 </div>
                 <div class="space-y-4">
-                    <h4 class="text-xl font-bold text-white flex items-center gap-2"><span class="text-yellow-500 font-mono">01.</span> Concept & Core Mechanics</h4>
-                    <div class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden"><img src="fikG6w.png" alt="Bubblow Mechanics" class="w-full h-auto"></div>
+                    <h4 class="text-xl font-bold text-white font-mono uppercase tracking-tighter">01. Concept & Core Mechanics</h4>
+                    <img src="fikG6w.png" alt="Bubblow Mechanics" class="w-full h-auto rounded-lg">
                 </div>
                 <div class="space-y-4">
-                    <h4 class="text-xl font-bold text-white flex items-center gap-2"><span class="text-yellow-500 font-mono">02.</span> Gameplay Experience</h4>
+                    <h4 class="text-xl font-bold text-white font-mono uppercase tracking-tighter">02. Gameplay Experience</h4>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <img src="LThslb.png" alt="Gameplay 1" class="rounded border border-zinc-800"><img src="SAuplV.png" alt="Gameplay 2" class="rounded border border-zinc-800">
-                        <div class="md:col-span-2"><img src="wVa2kD.png" alt="Gameplay 3" class="w-full rounded border border-zinc-800"></div>
+                        <img src="LThslb.png" alt="Gameplay 1" class="rounded border border-zinc-800">
+                        <img src="SAuplV.png" alt="Gameplay 2" class="rounded border border-zinc-800">
+                        <div class="md:col-span-2">
+                            <img src="wVa2kD.png" alt="Gameplay 3" class="w-full rounded border border-zinc-800">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -472,17 +532,17 @@
                 <div class="space-y-4">
                     <h4 class="text-xl font-bold text-white flex items-center gap-2"><span class="text-green-500 font-mono">01.</span> Concept & Core Game Mechanics</h4>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <img src="Furry War Game player Concept.png" class="rounded border border-zinc-800"><img src="Furry War Core Game Mechanics.png" class="rounded border border-zinc-800">
+                        <img src="Furry War Game player Concept.png" class="rounded border border-zinc-800 w-full"><img src="Furry War Core Game Mechanics.png" class="rounded border border-zinc-800 w-full">
                     </div>
                 </div>
                 <div class="space-y-4">
                     <h4 class="text-xl font-bold text-white flex items-center gap-2"><span class="text-green-500 font-mono">02.</span> Environments & UI Flow</h4>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <img src="Z+F7cc.png" alt="How to play" class="md:col-span-2 rounded border border-zinc-800">
-                        <img src="D7MhBf.png" class="rounded border border-zinc-800"><img src="1rbcCE.png" class="rounded border border-zinc-800">
-                        <img src="6EuxOM.png" class="md:col-span-2 rounded border border-zinc-800">
-                        <img src="Furry War ภาพร่างคร่าวๆ.png" class="md:col-span-2 rounded border border-zinc-800">
-                        <img src="Furry War Leaderboard Design.png" class="md:col-span-2 rounded border border-zinc-800">
+                        <img src="Z+F7cc.png" alt="How to play" class="md:col-span-2 rounded border border-zinc-800 w-full">
+                        <img src="D7MhBf.png" class="rounded border border-zinc-800 w-full"><img src="1rbcCE.png" class="rounded border border-zinc-800 w-full">
+                        <img src="6EuxOM.png" class="md:col-span-2 rounded border border-zinc-800 w-full">
+                        <img src="Furry War ภาพร่างคร่าวๆ.png" class="md:col-span-2 rounded border border-zinc-800 w-full">
+                        <img src="Furry War Leaderboard Design.png" class="md:col-span-2 rounded border border-zinc-800 w-full">
                     </div>
                 </div>
                 <div class="space-y-4">
@@ -493,16 +553,26 @@
         </div>
     </div>
 
+    <!-- Scripts -->
     <script>
         lucide.createIcons();
+
+        // Modal Controls
         function openModal(id) {
-            const m = document.getElementById(id); m.classList.remove('hidden');
-            setTimeout(() => { m.classList.remove('opacity-0'); }, 10);
+            const modal = document.getElementById(id);
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+            }, 10);
             document.body.style.overflow = 'hidden';
         }
+
         function closeModal(id) {
-            const m = document.getElementById(id); m.classList.add('opacity-0');
-            setTimeout(() => { m.classList.add('hidden'); }, 300);
+            const modal = document.getElementById(id);
+            modal.classList.add('opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
             document.body.style.overflow = 'auto';
         }
     </script>
